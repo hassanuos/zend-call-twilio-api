@@ -62,10 +62,10 @@ class TwilioServiceController extends AbstractController{
 		public function ProcessRecDigitAction(){
 			$digit = isset($_REQUEST['Digits']) ? $_REQUEST['Digits'] : null;
 			$choices = array(
-				'1' => 'Cheese',
-				'2' => 'Pepperoni',
-				'3' => 'Sausage',
-				'4' => 'Pineapple_Bacon',
+				'1' => 'SMS',
+				'2' => 'Internet',
+				'3' => 'Voicemail',
+				'4' => 'Quit',
 			);
 			if (isset($choices[$digit])) {
 				$say = 'You Ordered '.$choices[$digit].' Thank you. Your choice has been tallied.';
